@@ -1,0 +1,36 @@
+{
+  "openings": [
+    {
+      "index": 0,
+      "group": "inlet",
+      "center": [0.0, 0.0, 0.0],
+      "normal": [0.0, 0.0, -1.0],
+      "radius": 0.012,
+      "far_center": [0.0, 0.0, -0.02]
+    },
+    {
+      "index": 1,
+      "group": "arch",
+      "center": [0.012, 0.0, 0.20],
+      "normal": [1.0, 0.0, 0.0],
+      "radius": 0.005,
+      "far_center": [0.03, 0.0, 0.20]
+    },
+    {
+      "index": 2,
+      "group": "renal",
+      "center": [-0.012, 0.0, 0.10],
+      "normal": [-1.0, 0.0, 0.0],
+      "radius": 0.0035,
+      "far_center": [-0.03, 0.0, 0.10]
+    },
+    {
+      "index": 3,
+      "group": "iliac",
+      "center": [0.006, 0.0, -0.02],
+      "normal": [0.0, 0.0, -1.0],
+      "radius": 0.0045,
+      "far_center": [0.006, 0.0, -0.05]
+    }
+  ]
+}

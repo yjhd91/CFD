@@ -1,0 +1,58 @@
+{
+  "patient_id": "__PATIENT_ID__",
+  "case_id": "__CASE_ID__",
+  "description": "REBOA aortic CFD patient. Replace geometry/lumen.stl and geometry/openings.json.",
+  "geometry": {
+    "lumen_stl": "geometry/lumen.stl",
+    "openings": "geometry/openings.json"
+  },
+  "openings": "geometry/openings.json",
+  "runtime": {
+    "ansys_root": "",
+    "ansys_python": "",
+    "python": "",
+    "fluent": "",
+    "spaceclaim": "",
+    "prime_root": "",
+    "prime_site": "",
+    "prime_port": 50080,
+    "cores": 4
+  },
+  "mesh": {
+    "min_mm": 0.4,
+    "max_mm": 2.0,
+    "layers": 5,
+    "first_mm": 0.02,
+    "growth": 1.2
+  },
+  "solver": {
+    "cycles": 3,
+    "time_step_s": 0.002,
+    "cores": 4,
+    "steady_iterations": 400
+  },
+  "physics": {
+    "inlet_velocity": 0.0487,
+    "density": 1050.0,
+    "viscosity": 0.0035,
+    "outlet_pressure": 8000.0,
+    "period_s": 0.5
+  },
+  "zones": {
+    "ZoneI": {
+      "enabled": true,
+      "z_center": 0.25,
+      "center_xy": [0.0, 0.0],
+      "gaps_mm": [1.0, 1.44],
+      "length_mm": 40.0,
+      "end_mm": 6.0,
+      "r_max_m": 0.012,
+      "complete": false,
+      "stem": {
+        "enabled": true
+      }
+    }
+  },
+  "source_cases": [],
+  "cases": []
+}

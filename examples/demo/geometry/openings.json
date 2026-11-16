@@ -1,0 +1,30 @@
+[
+  {
+    "zone": "inlet",
+    "center": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "normal": [
+      0,
+      0,
+      -1
+    ],
+    "radius": 0.012
+  },
+  {
+    "zone": "outlet_arch",
+    "center": [
+      0.0,
+      0.0,
+      0.3
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ],
+    "radius": 0.012
+  }
+]

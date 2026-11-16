@@ -1,0 +1,73 @@
+{
+  "patient_id": "DEMO",
+  "case_id": "DEMO",
+  "description": "Synthetic straight-tube demo. No patient data. Run: python -m cfd run --patient examples/demo/patient.json --stage all",
+  "geometry": {
+    "lumen_stl": "geometry/lumen.stl",
+    "openings": "geometry/openings.json"
+  },
+  "runtime": {
+    "ansys_root": "",
+    "ansys_python": "",
+    "python": "",
+    "fluent": "",
+    "spaceclaim": "",
+    "prime_root": "",
+    "prime_site": "",
+    "prime_port": 50080,
+    "cores": 4
+  },
+  "mesh": {
+    "min_mm": 0.4,
+    "max_mm": 2.0,
+    "layers": 5,
+    "first_mm": 0.02,
+    "growth": 1.2
+  },
+  "solver": {
+    "cycles": 1,
+    "time_step_s": 0.002,
+    "cores": 4,
+    "steady_iterations": 400
+  },
+  "physics": {
+    "inlet_velocity": 0.0487,
+    "density": 1050.0,
+    "viscosity": 0.0035,
+    "outlet_pressure": 8000.0,
+    "period_s": 0.5
+  },
+  "zones": {
+    "ZoneI": {
+      "enabled": true,
+      "z_center": 0.15,
+      "center_xy": [
+        0.0,
+        0.0
+      ],
+      "gaps_mm": [
+        1.0
+      ],
+      "length_mm": 40.0,
+      "end_mm": 6.0,
+      "r_max_m": 0.012,
+      "complete": false,
+      "stem": {
+        "enabled": true
+      }
+    }
+  },
+  "source_cases": [],
+  "cases": [
+    {
+      "tag": "DEMO_zonei_g10",
+      "label": "ZoneI 1 mm",
+      "key": "zonei_g10",
+      "zone": "ZoneI",
+      "kind": "partial",
+      "gap_mm": 1.0,
+      "step": "geometry/DEMO/DEMO_zonei_g10_sc.stp",
+      "stl": "geometry/DEMO/DEMO_zonei_g10.stl"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# cfd run artifacts
+examples/*/work/
+examples/*/meshes/
+examples/*/results/
+examples/*/reports/
+examples/*/logs/
+examples/*/validation/
+examples/*/hemo/
+patients/*/work/
+patients/*/meshes/
+patients/*/results/
+patients/*/reports/
+patients/*/logs/
+patients/*/validation/
+patients/*/hemo/
+patients/*/geometry/*.stp
+patients/*/geometry/*.stl
+
+# ANSYS / Fluent
+*.msh
+*.msh.h5
+*.cas
+*.cas.gz
+*.dat
+*.dat.gz
+*.trn
+*.jou
+*.log
+*.h5
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Secrets
+.env
+*.pem
+*.key
+token.txt
+
+examples/*/geometry/*/
+examples/*/geometry/*.stp
+*.json.bak
+
