@@ -48,8 +48,8 @@ A complete transient solve additionally needs the cap faces to arrive with
 **named zones** (`inlet`, `outlet_arch`, `outlet_renal`, `outlet_iliac`). The
 synthetic STEP created by `prep` currently has one solid and unnamed caps, so
 `mesh` produces a wall-only boundary and `solve` stops with a clear
-`KeyError`. Real patient STEP files that carry named cap groups run the whole
-chain. Automatic cap naming is the next engineering item; see
+`KeyError`. Cases whose STEP carries named cap groups can run the whole chain;
+automatic cap naming is the next engineering item. See
 `docs/TROUBLESHOOTING.md`.
 
 The 12-case REBOA study, patient CT data and production meshes are **not** in

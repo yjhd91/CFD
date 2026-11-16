@@ -109,9 +109,20 @@ fill` in a loop. Use one of:
 
 Never commit a token to the repository.
 
+## The mesh has only a wall zone and `solve` raises `KeyError: 'inlet'`
+
+The Watertight step merged the cap faces into the wall because the input STEP
+did not carry named cap faces. The pipeline does not guess cap names from
+geometry yet.
+
+Supply named cap faces (`inlet`, `outlet_arch`, `outlet_renal`,
+`outlet_iliac`) in the STEP, or add a cap-naming step before the boundary
+export. The synthetic demo intentionally stops here; it validates `doctor`,
+`prep` and `mesh`, not the boundary-condition stage.
+
 ## The demo meshes but the real case is slow
 
-The demo is a 24 mm tube. A patient aorta with 13 openings and a 1 mm annular
+The demo is a 300 mm tube. A patient aorta with 13 openings and a 1 mm annular
 gap has a much larger surface and a much thinner near-wall region. Expect the
 Watertight mesh and the Prime prism step to dominate wall time. Keep at most two
 Fluent sessions alive; each session holds a license and a large commit charge.
